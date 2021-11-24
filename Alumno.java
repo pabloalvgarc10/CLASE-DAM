@@ -18,6 +18,7 @@ public class Alumno {
         if (nombre.length() < 3){
             System.out.println ("error");
         } 
+        
         if(numeroMatricula.length() < 4){
             System.out.println ("error");
         }
@@ -55,7 +56,12 @@ public class Alumno {
     }
 
     public String getNombreUsuarioGithub() {
-
+        if(nombre.length() < 3){
+            nombre = nombre;
+        }
+        if(numeroMatricula.length() < 4){
+            numeroMatricula = numeroMatricula;
+        }
         return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
     }
 }
