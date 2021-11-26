@@ -5,6 +5,8 @@ public class Alumno {
     // el numero de matricula
     private String numeroMatricula;
     // la edad del alumno
+    
+    
     private int edad;
 
     /**
@@ -56,14 +58,51 @@ public class Alumno {
     }
 
     public String getNombreUsuarioGithub() {
+        
+        
+        String cadenaMatricula;
+        String cadenaNombre;
+        
+        
+        
         if(nombre.length() < 3){
-            nombre = nombre;
+            cadenaNombre = nombre;
+        }
+        else{
+            cadenaNombre = nombre.substring(0, 3);
         }
         if(numeroMatricula.length() < 4){
-            numeroMatricula = numeroMatricula;
+            cadenaMatricula = numeroMatricula;
         }
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        else{
+            cadenaMatricula = numeroMatricula.substring(0, 4);
+            
+        }
+        
+        
+        return cadenaNombre + cadenaMatricula;
+        
+        
     }
-}
+        
+    }
+
+
+
+    
+    
+        
+        
+        
+
+    
+        
+        
+
+    
+    
+
+
+
 
 
